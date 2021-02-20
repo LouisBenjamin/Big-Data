@@ -1,12 +1,12 @@
 # Big-Data
 
-## Abstract
+## ABSTRACT
 
 For this SOEN471 project, we will be analyzing, in a team of two people, the scripts of the Avenger Movies (The Avengers, Age of Ultron, Infinity War and Endgame). Using dataset analysis learned in previous courses (Artificial Intelligence, Data Analytics), we will discuss and interpret various areas of the movies, namely the frequency of the words used in dialogue. Using tools like Jupyter notebook (or R notebook), we will write an in-depth analysis related to the following topics with their corresponding graphical representation: importance of the characters, bigram frequencies, sentiment analysis.
 
 As a disclaimer, we were inspired by the following [project](https://www.kaggle.com/xvivancos/analyzing-star-wars-movie-scripts/report)
 
-## Introduction 
+## INTRODUCTION 
 
 ### Context
 This project is to introduce ourselves to big data manipulation in the context of a topic we are fond of, movies. We feel that movies have complexity that is lost during the viewing and can only be interpreted with data analysis. Indeed, we are all aware who the main characters are, their choice of words is usually what distinguishes them, aside from looks of course.
@@ -17,15 +17,15 @@ The objective of this project is to use the knowledge from previous courses to a
 ### Analysis
 We have settled on specific analysis point, which may be subject to change (depending on the complexity of the Avenger Movies):
 
-•	Lines of dialogue per character
-•	Lines of dialogue per character from each movie
-•	Sentiment Analysis (How many words belong to a specific sentiment i.e., joy, sadness, anticipation…)
-•	Sentiment Analysis across all 4 movies
-•	Most frequent sentiment words for each category
-•	Sentiment count for each character
-•	Most frequents words found in each movie.
-•	Most frequent words for each character
-•	Optional: Gender Analysis
+* Lines of dialogue per character
+* Lines of dialogue per character from each movie
+* Sentiment Analysis (How many words belong to a specific sentiment i.e., joy, sadness, anticipation…)
+* Sentiment Analysis across all 4 movies
+* Most frequent sentiment words for each category
+* Sentiment count for each character
+* Most frequents words found in each movie.
+* Most frequent words for each character
+* Optional: Gender Analysis
 
 One of the key reasons we chose this project was because of the sentiment analysis from the project we were inspired. As a team that previously studied Artificial Intelligence, classified and labeled data is in our comfort zone. More on this type of analysis will be detailed in the libraries section.
 
