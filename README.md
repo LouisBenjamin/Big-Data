@@ -1,3 +1,5 @@
+<img src="https://i2.wp.com/teaser-trailer.com/wp-content/uploads/Avengers-Infinity-War-Banner.jpg?ssl=1" width="110%" >
+
 # ABSTRACT
 For this SOEN471 project, we will create a Sentiment Analysis Model that will be developed based on a Twitter dataset. This model will then be used to analyze, in a team of two people, the scripts of the Marvel Cinematic Universe Movies (Notably the Avengers and The Iron Man Franchise). Using dataset analysis learned in previous courses (Artificial Intelligence, Data Analytics), we will discuss and interpret various areas of the movies, namely the sentiment ratios of character and corresponding movies. Using tools like Jupyter notebook, we will write an in-depth analysis related to what we know already of the movies/character and our report of the model reflects this. 
 # I. INTRODUCTION 
@@ -13,6 +15,8 @@ Not only does these nuances let us better understand the story but might affirm 
 Kaggle was an excellent resource as an extended twitter dataset with labeled and movie scripts were found. The twitter dataset has nearly 136k tweets labeled from [-1, 0, 1] where -1 is a negative sentiment, 0 a neutral statement and 1 is for a positive statement.
 On the other hand, the superhero movies scripts are pre-processed and separated by coma along with important information such as the character that said the line and in which movie. In this project we will mostly using a subset of the MCU dialogue found in the file mcu_subset.csv. In this file, the dialogue is filtered by the top 10 characters from the franchise (or main cast). These characters are:
 ```['TONY STARK', 'STEVE ROGERS', 'NATASHA ROMANOFF', 'THOR', 'NICK FURY', 'PEPPER POTTS', 'BRUCE BANNER', 'JAMES RHODES', 'LOKI', 'PETER PARKER']```
+What are superheroes without their counterpart? In this project the following villains were considered:
+```['THANOS', 'N\'JADAKA (KILLMONGER)', 'RED SKULL', 'BUCKY BARNES', 'ULTRON', 'HELA', 'RONAN', 'ADRIAN TOOMES']```
 ## Technologies
 One of the main technologies we will be using is Jupyter Notebook with various libraries to correctly text mine, analyse and understand the words found in the script of the Marvel Movies. 
 Spark was also used as the main framework our project, notably their machine learning package found in PySpark. The ease of use their data structures, more precisely its Dataframe, will ease our manipulation, visualization and reiteration of the data.
@@ -33,44 +37,43 @@ Before we endeavoured our project, we believe it important for any analysis to h
 3. Antagonists will have greater negative sentiments
 We believe this can provide us with an analytic basis and render the discussion of the results more fruitful.
 ## Model Comparison 
-
 <p align="center">
 <img src="https://imgur.com/xBd44ax.jpg" width="85%" >
 </p>
-
-As seen above, from the three models that we explored, the One Vs All (a algorithms meant for multinomial classification using logistic regression) was the clear winner. Before explaining why we think it performed best, we must delve into why the other two did so poorly in comparison.
+As seen above, from the three models that we explored, the One Vs All (a algorithms meant for multinomial classification using logistic regression) was the clear winner. Before explaining why, we think it performed best, we will delve into why the other two did so poorly in comparison later in section IV.
 
 <p align="center">
 <img src="https://imgur.com/YF5W1xm.jpg" width="85%" >
 </p>
-
 It is important to highlight that we initially attempted binomial logistic regression on a [negative, positive] labeled dataset in the first iterations of our project and it failed miserably. Not that the model was inaccurate, it is quite the opposite with it having a over 99% accuracy and F1-score. The problem lied when we applied the model to the MCU script, we had received highly skewed results in the negative prediction. This can be easily explained from the fact that movie dialogue inherently neutral and lead to the predictor believing that neutral dialogue was negative. This reason alone led our team to rework the code, seek multinomial classification methods and their respective dataset.
 
 
-### Overall Sentiment of The Marvel Cinematic Universe
+## Overall Sentiment of The Marvel Cinematic Universe
 
 <p align="center">
 <img src="https://imgur.com/TVxyrC8.jpg" width="85%" >
 </p>
+This is the result when the Multinomial Logistic Regression Model is applied to all the movies in the MCU. The pie chart distribution indicates a mostly neutral dialogue (57.6%), with the rest being mostly positive (26.7%) and little negative sentimental dialogue (15.7%).
 
-### Sentiment Analysis Sorted by the Main Cast
+## Sentiment Analysis Sorted by the Main Cast
 
 <p align="center">
 <img src="https://imgur.com/NSsFpkV.jpg" width="85%" >
 </p>
-
-### Sentiment Analysis Sorted by the Villain Cast
+When the model is applied to the main cast, there is interesting results shown. The most neutral character (per their dialogue) is Peter Parker (Spiderman). The most positive sentimental character is Nick Fury and the most negative is tied by Bruce Banner (The Hulk) and James Rhodes (War Machine).
+## Sentiment Analysis Sorted by the Villain Cast
 
 <p align="center">
 <img src="https://imgur.com/UDCojvj.jpg" width="85%" >
 </p>
-
-### Sentiment Analysis Sorted by the Movies
+The villains are also an interesting case. The only character that is morally ambiguous, Bucky Barnes, is highly neutral at 69.1% while the most positive character is Red Skull. The most negative is Hela. Of note, Thanos, the ultimate antagonist of the series of movies, ranks the lowest ratio in all categories, making him perfectly balanced in terms of sentiments (as all things should be).
+## Sentiment Analysis Sorted by the Movies
 
 <p align="center">
 <img src="https://imgur.com/yorzSRV.jpg" width="90%" >
 </p>
-
+Although we believe these results are the least compelling, the sentiments are still relevant to our discussion and somewhat connected to the hypothesises. The greater amount of positive sentiment can be found in Captain America: Winter Soldier while the more negative Movie is Captain American: The First Avenger. The most neutral is Thor.
+ 
 # IV. Discussion
 
 ## References
