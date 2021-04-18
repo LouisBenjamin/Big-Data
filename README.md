@@ -43,24 +43,24 @@ Before endeavouring into the project, we believe it important for any analysis t
 
 ## Model Comparison 
 
-![image](https://imgur.com/xBd44ax)
-![image](https://imgur.com/YF5W1xm)
+![image](https://imgur.com/xBd44ax.jpg)
+![image](https://imgur.com/YF5W1xm.jpg)
 
 ### Overall Sentiment of The Marvel Cinematic Universe
 
-![image](https://imgur.com/TVxyrC8)
+![image](https://imgur.com/TVxyrC8.jpg)
 
 ### Sentiment Analysis Sorted by the Main Cast
 
-![image](https://imgur.com/NSsFpkV)
+![image](https://imgur.com/NSsFpkV.jpg)
 
 ### Sentiment Analysis Sorted by the Villain Cast
 
-![image](https://imgur.com/UDCojvj)
+![image](https://imgur.com/UDCojvj.jpg)
 
 ### Sentiment Analysis Sorted by the Movies
 
-![image](https://imgur.com/yorzSRV)
+![image](https://imgur.com/yorzSRV.jpg)
 
 # IV. Discussion
 
