@@ -12,7 +12,7 @@ Not only does these nuances let us better understand the story but might affirm 
 [Twitter and Reddit Sentimental analysis Dataset](https://www.kaggle.com/cosmos98/twitter-and-reddit-sentimental-analysis-dataset)
 Kaggle was an excellent resource as an extended twitter dataset with labeled and movie scripts were found. The twitter dataset has nearly 136k tweets labeled from [-1, 0, 1] where -1 is a negative sentiment, 0 a neutral statement and 1 is for a positive statement.
 On the other hand, the superhero movies scripts are pre-processed and separated by coma along with important information such as the character that said the line and in which movie. In this project we will mostly using a subset of the MCU dialogue found in the file mcu_subset.csv. In this file, the dialogue is filtered by the top 10 characters from the franchise (or main cast). These characters are:
-```['TONY STARK', 'STEVE ROGERS', 'NATASHA ROMANOFF', 'THOR', 'NICK FURY', 'PEPPER POTTS', 'BRUCE BANNER', 'JAMES RHODES', 'LOKI', 'PETER PARKER']``
+```['TONY STARK', 'STEVE ROGERS', 'NATASHA ROMANOFF', 'THOR', 'NICK FURY', 'PEPPER POTTS', 'BRUCE BANNER', 'JAMES RHODES', 'LOKI', 'PETER PARKER']```
 ## Technologies
 One of the main technologies we will be using is Jupyter Notebook with various libraries to correctly text mine, analyse and understand the words found in the script of the Marvel Movies. 
 Spark was also used as the main framework our project, notably their machine learning package found in PySpark. The ease of use their data structures, more precisely its Dataframe, will ease our manipulation, visualization and reiteration of the data.
@@ -33,14 +33,17 @@ Before we endeavoured our project, we believe it important for any analysis to h
 3. Antagonists will have greater negative sentiments
 We believe this can provide us with an analytic basis and render the discussion of the results more fruitful.
 ## Model Comparison 
+
 <p align="center">
 <img src="https://imgur.com/xBd44ax.jpg" width="85%" >
 </p>
+
 As seen above, from the three models that we explored, the One Vs All (a algorithms meant for multinomial classification using logistic regression) was the clear winner. Before explaining why we think it performed best, we must delve into why the other two did so poorly in comparison.
 
 <p align="center">
 <img src="https://imgur.com/YF5W1xm.jpg" width="85%" >
 </p>
+
 It is important to highlight that we initially attempted binomial logistic regression on a [negative, positive] labeled dataset in the first iterations of our project and it failed miserably. Not that the model was inaccurate, it is quite the opposite with it having a over 99% accuracy and F1-score. The problem lied when we applied the model to the MCU script, we had received highly skewed results in the negative prediction. This can be easily explained from the fact that movie dialogue inherently neutral and lead to the predictor believing that neutral dialogue was negative. This reason alone led our team to rework the code, seek multinomial classification methods and their respective dataset.
 
 
